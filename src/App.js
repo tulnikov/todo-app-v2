@@ -8,7 +8,7 @@ function App() {
     const [todos, setTodos] = useState([]);
 
     const formTodoHandler = (text) => {
-        setTodos([...todos, text])
+        setTodos([text, ...todos])
     }
 
     return (

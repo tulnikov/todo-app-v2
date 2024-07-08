@@ -6,7 +6,10 @@ const FormTodo = ({formTodo}) => {
 
     const onSubmitHandler = (event) => {
         event.preventDefault();
-        formTodo(todo)
+        if (todo.trim()) {
+            formTodo(todo)
+        }
+
         setTodo('')
     }
 

@@ -1,0 +1,14 @@
+.todoItem{
+    border: 1px solid #655f5f;
+    border-radius: 3px;
+    box-shadow: 2px 2px 3px #c53f59;
+    max-width: 30%;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: left;
+}
+
+.todoArrow {
+    margin-right: 10px;
+    color: #f30534;
+}
