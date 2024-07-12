@@ -11,11 +11,15 @@ function App() {
         setTodos([text, ...todos])
     }
 
+    const deleteTodoHandler = (index) => {
+        setTodos(todos.filter((todo, idx) => idx !== index))
+    }
+
     return (
         <div className="App">
             <h1>Todo App v1</h1>
             <FormTodo formTodo={formTodoHandler}/>
-            <TodoList todos={todos}/>
+            <TodoList todos={todos} deleteTodo = {deleteTodoHandler}/>
         </div>
     );
 }

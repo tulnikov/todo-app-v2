@@ -1,15 +1,12 @@
-import { RiSendPlane2Line } from "react-icons/ri";
+import {RiSendPlane2Line} from "react-icons/ri";
 import styles from './Todo.module.css';
 
-const Todo = ({todo}) => {
+const Todo = ({todo, index, deleteTodo}) => {
 
-    const onDoubleClickHandler = (e) => {
-        console.log('double clicked');
-    }
 
     return (
-        <div onDoubleClick={onDoubleClickHandler} className={styles.todoItem}>
-           <RiSendPlane2Line className={styles.todoArrow} />
+        <div onDoubleClick={() => deleteTodo(index)} className={styles.todoItem}>
+            <RiSendPlane2Line className={styles.todoArrow}/>
             {todo}
         </div>)
 }
