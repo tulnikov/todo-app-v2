@@ -4,8 +4,8 @@ const TodoList = ({todos, deleteTodo}) => {
     return (
     <div>
         {!todos.length && <h2>Ваш список дел - пуст!</h2>}
-        {todos.map((todo, index) => (
-            <Todo todo={todo} key={index} index={index} deleteTodo={deleteTodo} />
+        {todos.map((todo) => (
+            <Todo todo={todo} key={todo.id} deleteTodo={deleteTodo} />
         ))}
 
     </div>
